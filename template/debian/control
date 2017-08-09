@@ -1,0 +1,12 @@
+Source: {{PackageName}}
+Section: devel
+Priority: extra
+Maintainer: {{Maintainer}}
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.1
+Homepage: {{HomePage}}
+
+Package: {{PackageName}}
+Architecture: amd64
+Depends: ${misc:Depends}
+Description: {{Description}}

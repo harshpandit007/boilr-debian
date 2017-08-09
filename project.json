@@ -1,0 +1,9 @@
+{
+    "Name": "Debian Template",
+    "HomePage": "https://myapp.com/",
+    "OrgName": "Google",
+    "Description": "My app API and web server",
+    "Maintainer": "Harsh Kumar <harshpandit100@gmail.com>",
+    "PackageName": "myapp",
+    "Year": "2017"
+}
