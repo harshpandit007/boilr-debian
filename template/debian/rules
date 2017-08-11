@@ -6,7 +6,7 @@ export DH_VERBOSE=1
 
 export GOPATH=$(CURDIR)
 
-SRCDIR=github.com/{{OrgName}}/{{PackageName}}
+SRCDIR=github.com/{{OrgName | toLower}}/{{PackageName}}
 PKGNAME=$(shell basename $(SRCDIR))
 PKGDIR=debian/$(PKGNAME)
 VERSION=$(shell dpkg-parsechangelog | sed -n -e 's/^Version: //p')
