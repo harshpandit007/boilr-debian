@@ -27,13 +27,11 @@ binary-arch: clean
 	go get -ldflags "-X main.buildhash=$(BUILDHASH)" $(SRCDIR)
 	go get -ldflags "-X main.buildhash=$(BUILDHASH)" $(SRCDIR)/cmd/nsqcon
 	go get -ldflags "-X main.buildhash=$(BUILDHASH)" $(SRCDIR)/cmd/cron
-	go get -ldflags "-X main.buildhash=$(BUILDHASH)" $(SRCDIR)/src/frontend/event
 	mkdir -p $(PKGDIR)/usr/bin
 	install -d $(PKGDIR)/var/www/$(PKGNAME)/bin/
 	cp $(GOPATH)/bin/$(PKGNAME) $(PKGDIR)/var/www/$(PKGNAME)/bin/$(PKGNAME).$(VERSION)
 	cp $(GOPATH)/bin/nsqcon $(PKGDIR)/var/www/$(PKGNAME)/bin/nsqcon
 	cp $(GOPATH)/bin/cron $(PKGDIR)/var/www/$(PKGNAME)/bin/cron
-	cp $(GOPATH)/bin/event $(PKGDIR)/var/www/$(PKGNAME)/bin/event
 	ln -sf /var/www/$(PKGNAME)/bin/$(PKGNAME).$(VERSION) $(PKGDIR)/usr/bin/$(PKGNAME) 
 	PKGDIR=$(PKGDIR) SRCDIR=src/$(SRCDIR)/ bash src/$(SRCDIR)/bin/deploy 
 	dh_strip
