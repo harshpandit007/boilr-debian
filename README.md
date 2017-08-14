@@ -16,7 +16,7 @@
 > boilr list
 
 ## Usage
-> boilr use debian /my-project-dir
+> boilr use debian my-project-dir/
 
 ## More Information
 > For more information please check boilr. https://github.com/tmrts/boilr#getting-started-with-boilr
